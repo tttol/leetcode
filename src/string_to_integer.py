@@ -7,20 +7,28 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        def determine_sign(s):
+            if s == '':
+                return None
+            elif s[0] == '+' or re.match('[0-9]', s[0]):
+                return True
+            elif s[0] == '-':
+                return False
+            else:
+                return None
+        
+        s = s.lstrip()
+        is_positive = determine_sign(s)
+        if is_positive == None:
+            return 0
+        
         num = 0
-        is_positive = True
-        is_encountered = False
-        s = s.strip()
-        for char in s:
-            if char == '+' and not is_encountered:
-                is_encountered = True
-            elif char == '-' and not is_encountered:
-                is_encountered = True
-                is_positive = False
+        for i, char in enumerate(s):
+            if i == 0 and (s[i] == '+' or s[i] == '-'):
+                continue
             elif not re.match('[0-9]', char):
                 break
             else:
-                is_encountered = True
                 num *= 10
                 num += int(char)
         if is_positive:
