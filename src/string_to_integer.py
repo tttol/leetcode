@@ -7,7 +7,7 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        def determine_sign(s):
+        def is_positive(s):
             if s == '':
                 return None
             elif s[0] == '+' or re.match('[0-9]', s[0]):
@@ -18,7 +18,7 @@ class Solution(object):
                 return None
         
         s = s.lstrip()
-        is_positive = determine_sign(s)
+        is_positive = is_positive(s)
         if is_positive == None:
             return 0
         
