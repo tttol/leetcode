@@ -7,19 +7,19 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        def is_positive(s):
+        def determine_sign(s):
             if s == '':
-                return None
+                return 0
             elif s[0] == '+' or re.match('[0-9]', s[0]):
-                return True
+                return 1
             elif s[0] == '-':
-                return False
+                return -1
             else:
-                return None
+                return 0
         
         s = s.lstrip()
-        is_positive = is_positive(s)
-        if is_positive == None:
+        sign = determine_sign(s)
+        if sign == 0:
             return 0
         
         num = 0
@@ -31,14 +31,13 @@ class Solution(object):
             else:
                 num *= 10
                 num += int(char)
-        if is_positive:
+        if sign == 1:
             return min(num, 2**31 - 1)
-        else:
+        elif sign == -1:
             return max(-num, -2**31)
 
-
 s = Solution()
-print(s.myAtoi("42"))
+# print(s.myAtoi("42"))
 print(s.myAtoi(" -042"))
 print(s.myAtoi("   -042"))
 print(s.myAtoi("1337c0d3"))
