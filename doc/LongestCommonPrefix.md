@@ -8,7 +8,7 @@ def lcp(s1, s2):
         longest_common_prefix += s1[i]
     return longest_common_prefix
 ```
-- 問題：https://leetcode.com/problems/longest-common-prefix/editorial/
+- 問題：https://leetcode.com/problems/longest-common-prefix/description/
 - 実装：https://github.com/tttol/leetcode/blob/main/src/longest_common_prefix2.py
   - LCPの入れ子で計算していく。これが正攻法っぽい。
 - 裏技実装：https://github.com/tttol/leetcode/blob/main/src/longest_common_prefix.py
