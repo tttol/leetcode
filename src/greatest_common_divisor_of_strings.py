@@ -17,16 +17,14 @@ class Solution(object):
                     remainder = a[i:]
                     break
             return remainder
-        return div(str1, str2)
 
-        # gcd(a, b) = gcd(b, r)
-        prev_remainder = ''
+        if len(str1) < len(str2):
+            str1, str2 = str2, str1
         while str2 != "":
-            str1= str2
-            str2 = div(str1, str2)
-            # print(str1, str2)
-
-            # prev_remainder = str2
+            r = div(str1, str2)
+            if str1 == r:
+                return ""
+            str1, str2 = str2, r
             
         return str1
         
@@ -35,3 +33,4 @@ s = Solution()
 print(s.gcdOfStrings("ABCABC", "ABC"))
 print(s.gcdOfStrings("ABABAB", "ABAB"))
 print(s.gcdOfStrings("LEET", "CODE"))
+print(s.gcdOfStrings("TAUXXTAUXXTAUXXTAUXXTAUXX", "TAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXX"))
