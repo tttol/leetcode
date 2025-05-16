@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/maximum-tastiness-of-candy-basket/description/
+# https://leetcode.com/problems/maximum-tastiness-of-candy-basket/solutions/2948107/binary-search/
 class Solution(object):
     def maximumTastiness(self, price, k):
         price.sort()
