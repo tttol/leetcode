@@ -7,10 +7,6 @@ class Solution(object):
         """
 
         planted = 0
-        if len(flowerbed) == 1:
-            if flowerbed[0] == 0:
-                planted += 1
-            return planted >= n
         
         for i in range(0, len(flowerbed)):
             if i == 0:
