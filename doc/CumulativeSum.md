@@ -1,7 +1,6 @@
 # Cumulative Sum/累積和
-:::note
-prefix sum ともいう
-:::
+> [!NOTE]
+> prefix sum ともいう
 
 - 定義
 ```
