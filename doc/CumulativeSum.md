@@ -19,6 +19,6 @@ for i in range(1, n + 1):
     cumsum[i] = nums[i - 1] + cumsum[i - 1]
 ```
 
-#　s[0]=0の理由
+#　 s[0]=0の理由
 - https://qiita.com/drken/items/56a6b68edef8fc605821#2-3-s_0--0-%E3%81%AE%E6%84%8F%E5%91%B3
 - s[i]はiを含まない。s[0]は0番目を含まない総和となり、和は0になる。
