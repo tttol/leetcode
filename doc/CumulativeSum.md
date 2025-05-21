@@ -1,4 +1,8 @@
 # Cumulative Sum/累積和
+:::note
+prefix sum ともいう
+:::
+
 - 定義
 ```
 s[0] = 0
