@@ -12,19 +12,10 @@ class TreeNode:
 
 class Solution:
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        print(type(root))
-        if root is None:
-            return []
-        
-        if root.val == val:
+        if root is None or root.val == val:
             return root
         
         if root.val < val:
             return self.searchBST(root.right, val)
         else:
             return self.searchBST(root.left, val)
-
-
-# s = Solution()
-# print(s.searchBST(root = [4,2,7,1,3], val = 2))
-# print(s.searchBST(root = [4,2,7,1,3], val = 5))
