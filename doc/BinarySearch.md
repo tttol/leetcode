@@ -37,8 +37,6 @@ graph TD
         // pick < n
         right = mid - 1;// 探索対象からmidを除外するために−1する
       }
-      n = (int) Math.floor((right - left) / 2);
-      res = guess(n);
     }
     return 0;
   }
