@@ -2,37 +2,37 @@
 ### insert
 ```mermaid
 graph TD
-    A[Start Insert(root, value)] --> B{root is None?};
-    B -- Yes --> C[new_node = TreeNode(value)];
-    C --> D[Return new_node];
-    D --> Z[End Insert];
-    B -- No --> E{root.val == value?};
-    E -- Yes --> F[Return root (value already exists)];
-    F --> Z;
-    E -- No --> G{root.val < value?};
-    G -- Yes --> H[root.right = Insert(root.right, value)];
-    H --> F;
-    G -- No --> I[root.left = Insert(root.left, value)];
-    I --> F;
+    A["Start Insert(root, value)"] --> B{"root is None?"}
+    B -- "Yes" --> C["new_node = TreeNode(value)"]
+    C --> D["Return new_node"]
+    D --> Z["End Insert"]
+    B -- "No" --> E{"root.val == value?"}
+    E -- "Yes" --> F["Return root (value already exists)"]
+    F --> Z
+    E -- "No" --> G{"root.val < value?"}
+    G -- "Yes" --> H["root.right = Insert(root.right, value)"]
+    H --> F
+    G -- "No" --> I["root.left = Insert(root.left, value)"]
+    I --> F
 ```
 
 ### search
 ```mermaid
 graph TD
-    SA[Start Search(root, value)] --> SB{root.val == value? (Assuming root is not None for initial call)};
-    SB -- Yes --> SC[Return root];
-    SC --> SZ[End Search];
-    SB -- No --> SD{root.val < value?};
-    SD -- Yes --> SE{root.right is None?};
-    SE -- Yes --> SF[Return None (value not found)];
-    SF --> SZ;
-    SE -- No --> SG[Return Search(root.right, value)];
-    SG --> SZ;
-    SD -- No --> SH{root.left is None? (Implies root.val > value)};
-    SH -- Yes --> SI[Return None (value not found)];
-    SI --> SZ;
-    SH -- No --> SJ[Return Search(root.left, value)];
-    SJ --> SZ;
+    SA["Start Search(root, value)"] --> SB{"root.val == value? (Assuming root is not None for initial call)"}
+    SB -- "Yes" --> SC["Return root"]
+    SC --> SZ["End Search"]
+    SB -- "No" --> SD{"root.val < value?"}
+    SD -- "Yes" --> SE{"root.right is None?"}
+    SE -- "Yes" --> SF["Return None (value not found)"]
+    SF --> SZ
+    SE -- "No" --> SG["Return Search(root.right, value)"]
+    SG --> SZ
+    SD -- "No" --> SH{"root.left is None? (Implies root.val > value)"}
+    SH -- "Yes" --> SI["Return None (value not found)"]
+    SI --> SZ
+    SH -- "No" --> SJ["Return Search(root.left, value)"]
+    SJ --> SZ
 ```
 
 ### python implementation
