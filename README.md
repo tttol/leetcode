@@ -5,6 +5,7 @@
 - [ ] [334. Increasing Triplet Subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/description/?envType=study-plan-v2&envId=leetcode-75)
 - [x] [Container with most water](https://leetcode.com/problems/container-with-most-water/description/)
 - [ ] [643. Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/description/?source=submission-noac)
+- [ ] [443. String Compression](https://leetcode.com/problems/string-compression/description/?envType=study-plan-v2&envId=leetcode-75)
 
 # 傾向
 - 配列のサイズが0,1の時はエッジケースになりがち
