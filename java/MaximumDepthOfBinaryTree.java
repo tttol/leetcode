@@ -1,7 +1,13 @@
-
 public class MaximumDepthOfBinaryTree {
+  TreeNode sampleNode = new TreeNode(
+    3,
+    new TreeNode(9),
+    new TreeNode(20, 
+      new TreeNode(15),
+      new TreeNode(7))
+    );
   public static void main(String[] args) {
-
+    System.out.println(maxDepth(sampleNode));
   }
 
   static final int SEARCHED = 1000;
