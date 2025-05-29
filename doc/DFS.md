@@ -1,5 +1,6 @@
 # DFS: Depth First Search
-- [1448. Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/?envType=study-plan-v2&envId=leetcode-75)
+[1448. Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/?envType=study-plan-v2&envId=leetcode-75)
+<br>
 ![alt text](image-3.png)
 ```py
 # Definition for a binary tree node.
