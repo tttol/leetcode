@@ -4,21 +4,18 @@ from typing import List
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
         n = len(cost)
-        i = 0
-        total_cost = 0
-        while i < n:
-            if i+1 < n:
-                if cost[i] < cost[i+1]:
-                    total_cost += cost[i]
-                    i += 1
-                else:
-                    total_cost += cost[i+1]
-                    i += 2
-            else:
-                total_cost += cost[i]
-                i += 1
+        if n == 2:
+            return min(cost[0], cost[1])
+        elif n== 1:
+            return cost[0]
+        
+        dp = [0] * (n + 1)
+        dp[n - 1] = cost[n - 1]
 
-        return total_cost
+        for i in range(n - 2, -1, -1):
+            dp[i] = cost[i] + min(dp[i + 1], dp[i + 2])
+        print(dp)
+        return min(dp[0], dp[1])
     
 if __name__ == "__main__":
     s = Solution()
