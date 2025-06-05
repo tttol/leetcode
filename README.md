@@ -9,6 +9,7 @@
 - DFS
   - [ ] [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/?envType=study-plan-v2&envId=leetcode-75)
   - [ ] [872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/description/?envType=study-plan-v2&envId=leetcode-75)
+- [ ] [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/?envType=study-plan-v2&envId=leetcode-75)
 
 # 傾向
 - 配列のサイズが0,1の時はエッジケースになりがち
